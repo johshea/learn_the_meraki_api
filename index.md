@@ -3,7 +3,7 @@ layout: default
 title: Meraki API Lab Guide
 ---
 
-# 🧪 Meraki API Lab Guide: From Beginner to Advanced
+# 🧪 Meraki API Lab Guide: Foundational Learning
 
 This guide walks you through using the Cisco Meraki API via Postman, Python, and the Meraki SDK.
 
