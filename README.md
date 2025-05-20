@@ -28,18 +28,5 @@ This guide includes:
 - [Lab 8: Webhooks](advanced/lab8_webhooks.md)
 - [Lab 9: Postman Runner](advanced/lab9_postman_runner_chained_requests.md)
 
-## 📎 Assets
-
-- 📷 Screenshots: [assets/](assets/)
-- 🔁 Postman Collection: [`meraki_postman_collection.json`](assets/meraki_postman_collection.json)
-
-## 🌐 GitHub Pages Setup
-
-To serve as a GitHub Pages site:
-1. Rename `index.md` to `README.md` or use as homepage
-2. Enable GitHub Pages in repo settings
-3. Set theme to `minimal` or `jekyll-theme-cayman` for best display
-
----
 
 Built for interactive learning and automation readiness.
