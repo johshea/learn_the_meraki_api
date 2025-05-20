@@ -1,0 +1,86 @@
+{
+  "info": {
+    "name": "Meraki API Sample Collection",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Sample collection demonstrating Meraki API chaining with org_id",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Organizations",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-Cisco-Meraki-API-Key",
+            "value": "{{api_key}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://api.meraki.com/api/v1/organizations",
+          "protocol": "https",
+          "host": [
+            "api",
+            "meraki",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "organizations"
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "let jsonData = pm.response.json();",
+              "pm.collectionVariables.set(\"org_id\", jsonData[0].id);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Get Networks by Org ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-Cisco-Meraki-API-Key",
+            "value": "{{api_key}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://api.meraki.com/api/v1/organizations/{{org_id}}/networks",
+          "protocol": "https",
+          "host": [
+            "api",
+            "meraki",
+            "com"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "organizations",
+            "{{org_id}}",
+            "networks"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "api_key",
+      "value": "<your_api_key>"
+    }
+  ]
+}
